@@ -327,7 +327,7 @@ extern "C" fn window_should_close(this: &Object, _: Sel, _: id) -> BOOL {
   trace!("Triggered `windowShouldClose:`");
   with_state(this, |state| state.emit_event(WindowEvent::CloseRequested));
   trace!("Completed `windowShouldClose:`");
-  NO
+  YES
 }
 
 extern "C" fn window_will_close(this: &Object, _: Sel, _: id) {
